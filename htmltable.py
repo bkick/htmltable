@@ -2,10 +2,10 @@ from flask import Flask, render_template
 app= Flask(__name__)
 
 users = (
-   {'first_name' : 'Michael', 'last_name' : 'Choi', 'number' : '1'},
-   {'first_name' : 'John', 'last_name' : 'Supsupin', 'number' : '2'},
-   {'first_name' : 'Mark', 'last_name' : 'Guillen', 'number' : '3'},
-   {'first_name' : 'KB', 'last_name' : 'Tonel', 'number' : '4'}
+   {'first_name' : 'Michael', 'last_name' : 'Choi'},
+   {'first_name' : 'John', 'last_name' : 'Supsupin'},
+   {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+   {'first_name' : 'KB', 'last_name' : 'Tonel'}
 );
 
 @app.route('/')

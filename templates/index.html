@@ -16,14 +16,14 @@
 				<th>Full Name in upper case</th>
 				<th>Length of full name (without spaces)</th>
 			</tr>
-			{% for user in users %}
+			{% for i in range(users|length): %}
 				<tr>
-					<td>{{user['number']}}<td>
-					<td>{{user['first_name']}}</td>
-					<td>{{user['last_name']}}</td> 
-					<td>{{user['first_name']}} {{user['last_name']}}</td>
-					<td>{{user['first_name'].upper()}} {{user['last_name'].upper()}}</td>
-					<td>{{user['first_name']|length}}+{{user['last_name']|length}}</td>
+					<td>{{i+1}}<td>
+					<td>{{users[i]['first_name']}}</td>
+					<td>{{users[i]['last_name']}}</td> 
+					<td>{{users[i]['first_name']}} {{users[i]['last_name']}}</td>
+					<td>{{users[i]['first_name'].upper()}} {{users[i]['last_name'].upper()}}</td>
+					<td>{{users[i]['first_name']|length+users[i]['last_name']|length}}</td>
 				</tr>
 			{% endfor %}
 		</table>
