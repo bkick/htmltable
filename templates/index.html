@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>htmltable</title>
+		<style type="text/css" media="screen">
+
+		</style>		
+	</head>
+		
+	<body>	
+		<table>
+			<tr>
+				<th>User#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Full Name</th>
+				<th>Full Name in upper case</th>
+				<th>Length of full name (without spaces)</th>
+			</tr>
+			{% for user in users %}
+				<tr>
+					<td>{{user['number']}}<td>
+					<td>{{user['first_name']}}</td>
+					<td>{{user['last_name']}}</td> 
+					<td>{{user['first_name']}} {{user['last_name']}}</td>
+					<td>{{user['first_name'].upper()}} {{user['last_name'].upper()}}</td>
+					<td>{{user['first_name']|length}}+{{user['last_name']|length}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
